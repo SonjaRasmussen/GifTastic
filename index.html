@@ -18,39 +18,33 @@
     <link rel="stylesheet" type="text/css" href="assets/style.css">
    
     <!--Adding JavaScript and Jquery-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
-
-    <body>
-            <div class="container">
-                    <h1>Sports GIFS</h1>
-
-        <!-- Sports will get dumped here -->
-        <div id="sports-view"></div>
-
-        <form id="sport-form">
-        <label for="sport-input">Add a Sport!</label>
-        <input type="text" id="sport-input"><br>
-
-  <!-- Button triggers new sport to be added -->
-  <input id="add-sport" type="submit" value="Add a Sport!">
-</form>
-
-        <div id="buttons"></div> 
-        <div id="gifs-appear-here"> </div>
-                         
-         
-        
-
-
-
-
-      
-
-        </div> <!--closes container
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/javascript/app.js"></script>
-        <script type="text/javascript" src="assets/javascript/list.js"></script>
-    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" >
+    </script>   <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 </head>
+    <body>
+
+        <div class="container">
+    <h1>Sports</h1>
+
+    <!-- Rendered Buttons will get Dumped Here  -->
+    <div id="buttons-view"></div>
+
+    <form id="sport-form">
+      <label for="sport-input">Add a Sport</label>
+      <input type="text" id="sport-input">
+      <br>
+
+      <!-- Button triggers new sport to be added -->
+      <input id="add-sport" type="submit" value="Add a Sport">
+    </form>
+
+    <!-- Sports will Get Dumped Here -->
+    <div id="sports-view"></div>
+       
+       
+       
+        
+    </body>
+
     </html>
