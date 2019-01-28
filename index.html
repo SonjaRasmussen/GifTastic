@@ -19,28 +19,54 @@
    
     <!--Adding JavaScript and Jquery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" >
-    </script>   <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+    </script>   <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
     <script type="text/javascript" src="assets/javascript/app.js"></script>
 </head>
     <body>
-
+        <div class="card text-center card bg-secondary text-white">
+            <div class="card-header">
+              <ul class="nav nav-pills card-header-pills">
+                <li class="nav-item">
+                    <a href="/" class="btn btn-secondary .bg-dark btn-lg active" role="button" aria-pressed="true">Back</a>
+                    
+                    </li>
+                </ul>
+            </div>
+        </div>
+           
+        
+       
+       
         <div class="container">
-    <h1>Sports</h1>
 
+        <div class="card-body">
+           <H3> <p class="text-center font-weight-bold text-info ">Display Sports Gifs</p></H3> 
+            </div>
+            
     <!-- Rendered Buttons will get Dumped Here  -->
     <div id="buttons-view"></div>
 
     <form id="sport-form">
-      <label for="sport-input">Add a Sport</label>
-      <input type="text" id="sport-input">
+      <label for="sport-input"></label>
+      <input type="text" placeholder="Add a sport" id="sport-input">
       <br>
 
       <!-- Button triggers new sport to be added -->
-      <input id="add-sport" type="submit" value="Add a Sport">
+      <input class="btn btn-info" id="add-sport" type="submit" value="Add a Sport">
     </form>
 
     <!-- Sports will Get Dumped Here -->
-    <div id="sports-view"></div>
+    <div class="container">
+          
+            <div id="sports-view" class="row"></div>
+    
+    
+    
+    
+    
+    </div><!-- Closes image container -->
+   
+   
        
        
        

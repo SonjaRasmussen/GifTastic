@@ -1,0 +1,23 @@
+button,input
+{
+    margin: 2px;
+    padding: 5px;
+}
+
+img.gif { max-width: 300px; }
+
+body{
+    font-family: "Exo 2";
+    background-image: url("../assets/images/spiration dark.png");
+}
+
+.col-6{
+    text-align: center;
+}
+
+#buttons-view{
+    margin: 40px 0px 10px 0px;
+}
+.card-header{
+    padding: 0px;
+}

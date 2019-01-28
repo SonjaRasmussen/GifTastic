@@ -1,7 +1,7 @@
 
 //Getting GIFS from api....onto HTML
 function displaySportsInfo(){ 
-console.log("Testing")
+
   //$("button").on("click", function(){
 var sport = $(this).attr("data-name");
 
@@ -22,7 +22,7 @@ var gifDiv = $("<div class='sport'>");
 //Storing an array of results in the sportsArr
 var results = response.data;
 
-$("sports").empty();
+
 
 //loop over the sports results
 for (var i=0; i< results.length; i++){
@@ -37,7 +37,12 @@ for (var i=0; i< results.length; i++){
       var rating = results[i].rating;
 
       //create a paragraph tag with the result item's rating
-      var p = $('<p>').text("Rating:" + rating);
+      var p = $('<p>').text("Rating: " + rating);
+      
+      //add attributes to p tag
+
+      p.attr("class","text-center font-weight-bold text-info");
+      
 
       //create an imag tag
       var sportsImage = $('<img>');
@@ -47,13 +52,24 @@ for (var i=0; i< results.length; i++){
       sportsImage.attr("data-still", response.data[i].images.original_still.url);
       sportsImage.attr("data-animate", response.data[i].images.original.url)
       sportsImage.attr("data-state", "still");
-      sportsImage.attr("class", "gif");
+      sportsImage.attr("class", "gif rounded mx-auto d-block border border-dark");
+      
+
+      // create a p tag with link to download gif
+      var download = $('<a>');
+      download.attr('href', response.data[i].images.original.url);
+      download.text("Download");
 
       //Appending the P tag and sportsArr we created to teh gifDiv
-      gifDiv.append(p);
+      
+      gifDiv.attr("class","col-6");
       gifDiv.append(sportsImage);
+      gifDiv.append(p);
+      gifDiv.append(download);
 
-      //prepending the gifDiv to the '#gifs-appear-here" div in the HTML
+
+
+      //prepending the gifDiv to the '#sports-view" div in the HTML
       $('#sports-view').prepend(gifDiv);
 
         }
@@ -94,7 +110,7 @@ function renderButtons(){
   $('#buttons-view').empty();
     for (var i = 0; i < sportsArr.length; i++){
       var a = $("<button>");
-      a.addClass("sport-btn");
+      a.addClass("btn btn-outline-info");
       a.attr("data-name", sportsArr[i]);
       a.text(sportsArr[i]);
       $('#buttons-view').append(a);
@@ -114,7 +130,7 @@ $("#add-sport").on("click", function(event){
 
 });
 
-$('#buttons-view').on("click", 'button.sport-btn', displaySportsInfo);
+$('#buttons-view').on("click", 'button', displaySportsInfo);
 $(document).on("click", ".gif", imageChangeState);
 
 })
